@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: hacbs-test-project-ccqc
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:psturc-tenant-hacbs-test-project-ccqc
+      - image: quay.io/redhat-appstudio/user-workload@sha256:6c467e251bf72f212286e389f9c89b861b5fe3c56ac2509358c2649acba701cd
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
