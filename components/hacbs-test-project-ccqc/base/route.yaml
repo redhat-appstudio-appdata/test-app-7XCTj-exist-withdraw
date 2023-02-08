@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: hacbs-test-project-ccqc
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: hacbs-test-project-ccqc
+    app.kubernetes.io/part-of: test-app
+  name: hacbs-test-project-ccqc
+  namespace: psturc-tenant
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: hacbs-test-project-ccqc
+    weight: 100
+status: {}
