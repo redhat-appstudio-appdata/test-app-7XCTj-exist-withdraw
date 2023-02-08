@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-ccqc
+  namespace: psturc-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:6c467e251bf72f212286e389f9c89b861b5fe3c56ac2509358c2649acba701cd
+        name: container-image
+        resources: {}
+status: {}
